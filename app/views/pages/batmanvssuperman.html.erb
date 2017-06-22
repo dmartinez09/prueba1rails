@@ -1,0 +1,34 @@
+
+
+
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <a href="<%= pages_batman_path %>"><h2>Batman</h2></a>
+    <img src="<%= asset_path '1bat.jpg'%>" class="img-responsive">
+    
+
+    <form action="<%= pages_votos_batman_path %>" method="POST" autocomplete="off">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    
+    <div><h6>Nombre</h6><input type="text" autofocus="true" required name="name"></div>
+    <div><h6>Email</h6><input type="mail" required name="mail"></div>
+    <button type="submit">Enviar</button>
+
+    <h2>Votos : <%= VotosBatman.count %></h2>
+</form>
+</div>
+<div class="col-md-6">
+<a href="<%= pages_superman_path %>"><h2>Superman</h2></a>
+    <img src="<%= asset_path 'superman.jpg'%>" class="img-responsive">
+
+    <form action="<%= pages_votos_superman_path %>" method="POST" autocomplete="off">
+       <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
+       <div><h6>Nombre</h6><input type="text" autofocus="true" required name="name"></div>
+       <div><h6>Email</h6><input type="mail" required name="mail"></div> 
+       <button type="submit">Enviar</button>
+       <h2>Votos : <%= VotosSuperman.count %></h2> 
+   </form> 
+
+</div>
+</div>

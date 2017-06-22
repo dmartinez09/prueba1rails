@@ -1,0 +1,23 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body.pages.batman{
+	background-image: url(<%= asset_path '1bat.jpg' %>);
+	background-repeat: no-repeat;
+	color: white;
+}
+
+body.pages.superman{
+	background-image: url(<%= asset_path 'superman.jpg' %>);
+	background-repeat: no-repeat;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+body.pages.batmanvssuperman div img{
+	height: 500px;
+	position: relative;
+	top: 0;
+}
